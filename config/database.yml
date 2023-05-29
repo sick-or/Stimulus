@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: Stimulus
+  password: <%= ENV['STIMULUS_DATABASE_PASSWORD'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV['DB_HOST'] %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: Stimulus_development
+
+test:
+  <<: *default
+  database: Stimulus_test
+
+production:
+  <<: *default
+  database: Stimulus_production
+  
