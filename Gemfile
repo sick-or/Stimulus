@@ -5,14 +5,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+gem "acts_as_list"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "figaro"
 gem "jbuilder", "~> 2.7"
+gem "jquery-rails"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 6.1.7", ">= 6.1.7.3"
 gem "redis", "~> 4.0"
 gem "sass-rails", ">= 6"
+gem "stimulus-rails"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
 
